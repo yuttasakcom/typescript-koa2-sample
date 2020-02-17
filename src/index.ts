@@ -4,7 +4,7 @@ import koa from 'koa'
 import { load } from '@spksoft/koa-decorator'
 
 const app = new koa()
-const router = load(resolve(__dirname, 'controllers'), '.controller.js')
+const router = load(resolve(__dirname, 'controllers'), '.controller.ts')
 
 app.use(router.routes()).use(router.allowedMethods())
 app.listen(3000)
